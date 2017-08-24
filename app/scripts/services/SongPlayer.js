@@ -77,6 +77,11 @@
 
            song = song || SongPlayer.currentSong;
 
+           if (song == null) {
+             setSong(playerBar.albumData.songs[0]);
+             playSong(playerBar.albumData.songs[0]);
+           }
+
            if (SongPlayer.currentSong !== song) {
              setSong(song);
              playSong(song);
