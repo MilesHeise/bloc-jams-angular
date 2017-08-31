@@ -95,10 +95,10 @@
            song = song || SongPlayer.currentSong;
 
            if (song == null) {
-             SongPlayer.next()();
+             SongPlayer.next();
            }
 
-           if (SongPlayer.currentSong !== song) {
+           else if (SongPlayer.currentSong !== song) {
              setSong(song);
              playSong(song);
 
